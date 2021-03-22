@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Simple Interest Rate Calculator</title>
-        <script src="script.js"></script>
+        <script src="ab.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -11,9 +11,9 @@
 
                 Amount <input type="number"  id="principal">  <br/>
                 Rate <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25" onchange="Show_value(this.value);">  
-                <span id="Value" ></span>%nv
+               <span id="Value" ></span>% 
                 <br>
-                No. of Years <input type="years">
+                No. of Years <input list="years" id="year" >
                 <datalist id="years">
                     <option value="1"></option>
                     <option value="2"></option>
@@ -26,10 +26,12 @@
                     <option value="9"></option>
                     <option value="10"></option>
                 </datalist>
-                <br>
+                <br><span id="Value"></span>
                 Interest : <span id="result"></span><br>
 
-            <button onclick="compute()">Compute</button>
+            <button onclick="compute()">Compute Interest</button>
+            
+            <footer>&copy;Everyone Can Get Rich</footer>
         </div>
     </body>
 </html>
